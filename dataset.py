@@ -255,6 +255,7 @@ class Yolo_dataset(Dataset):
         truth = {}
         f = open(lable_path, 'r', encoding='utf-8')
         for line in f.readlines():
+            line = line.strip()
             data = line.split(" ")
             truth[data[0]] = []
             for i in data[1:]:
