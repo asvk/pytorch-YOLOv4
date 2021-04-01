@@ -431,7 +431,7 @@ def get_image_id(filename:str) -> int:
     # return int(lv+no)
     fn = os.path.basename(filename)
     item = fn.split(".")[0]
-    img_id = int(item)
+    img_id = abs(hash(item) % 10000008911)
     return img_id
 
 
